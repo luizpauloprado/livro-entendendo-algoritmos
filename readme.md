@@ -1,5 +1,7 @@
 # Book exercises
 
+https://github.com/egonSchiele/grokking_algorithms
+
 Algorithms and data structures are foundational concepts in computer science and programming, working in conjunction to enable efficient problem-solving and software development.
 
 ## Data Structures:
