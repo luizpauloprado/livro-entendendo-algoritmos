@@ -17,18 +17,3 @@ const quicksort = (array) => {
 console.log("Quick sort for [10, 5, 2, 3]")
 console.log(quicksort([10, 5, 2, 3]));
 
-const quicksortStartingFromMiddle = (array) => {
-	if (array.length < 2) return array;
-
-    // get middle item
-    const mid = Math.floor(array.length / 2);
-	let pivot = array[mid];
-
-	let less = array.slice(1).filter((el) => el <= pivot);
-	let greater = array.slice(1).filter((el) => el > pivot);
-
-	return quicksort(less).concat(pivot, quicksort(greater));
-}
-
-console.log("Quick sort for [10, 5, 2, 3]")
-console.log(quicksortStartingFromMiddle([10, 5, 2, 3]));
