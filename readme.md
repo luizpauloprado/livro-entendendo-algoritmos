@@ -43,6 +43,7 @@ Examples of algorithms include:
 ### Sorting Algorithms:
 
 **Quicksort:**
+
 Quicksort is a highly efficient, comparison-based sorting algorithm that operates on the principle of "divide and conquer." It is widely recognized for its average-case performance, often outperforming other sorting algorithms like Merge Sort or Heap Sort on large, unordered datasets.
 
 - Divide and Conquer: It breaks down the sorting problem into smaller, more manageable sub-problems.
@@ -51,6 +52,7 @@ Quicksort is a highly efficient, comparison-based sorting algorithm that operate
 
 ### Searching Algorithms:
 **Binary search:**
+
 The binary search algorithm is an efficient search algorithm used to find the position of a target value **within a sorted array or list**. It operates on the principle of repeatedly dividing the search interval in half.
 The search begins by defining a search interval, typically encompassing the entire sorted array, with a 'low' index pointing to the first element and a 'high' index pointing to the last.
 In each step, the algorithm calculates the middle index within the current search interval.
@@ -58,6 +60,7 @@ In each step, the algorithm calculates the middle index within the current searc
 ### Graph Algorithms:
 
 **Breadth-First Search (BFS):**
+
 Breadth-First Search (BFS) is a graph traversal algorithm that systematically explores a graph or tree data structure. It operates by exploring all the nodes at the current depth level before moving on to nodes at the next depth level. This **level-by-level exploration** is achieved by utilizing a **queue data structure**, following the First-In, First-Out (**FIFO**) principle. 
 
 - Shortest Path in Unweighted Graphs: BFS guarantees finding the shortest path between a source node and any other reachable node in an **unweighted graph**, as it explores nodes in increasing order of their distance from the source.
@@ -67,6 +70,7 @@ Breadth-First Search (BFS) is a graph traversal algorithm that systematically ex
 - Flood Fill Algorithm: The concept of BFS is applied in algorithms like flood fill, where areas are filled outward from a starting point. 
 
 **Dijkstra:**
+
 Dijkstra's algorithm is a graph search algorithm that finds the shortest paths from a single source node to all other nodes in a **weighted graph**. It is widely used in applications like network routing protocols and mapping services to find optimal routes.
 
 - Single-source shortest path: It calculates the shortest path from a designated starting node to every other reachable node in the graph.
