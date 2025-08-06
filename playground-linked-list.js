@@ -158,13 +158,89 @@ const reverseList = (head) => {
         
         current.next = prev; // 🔄 Reverse the link
         prev = current; // 📋 Move pointers forward
-        
+
         current = nextTemp;
     }
     
     // prev is now the new head
     return prev;
 };
+
+function CompareLists(llist1, llist2) {
+    let current1 = llist1;
+    let current2 = llist2;
+    let result = 1; //1 equal and 0 diff
+    
+    while (current1.next !== null && current2.next !== null) {
+        if (current1.data !== current2.data) {
+            result = 0;
+            return;
+        }
+        
+        current1 = current1.next;
+        current2 = current2.next;
+    }
+    
+    if (current1.next === null && current2.next !== null) {
+        result = 0;
+    }
+    
+    if (current1.next !== null && current2.next === null) {
+        result = 0;
+    }
+    
+    return result;
+}
+
+function getNodeCountingBackwards(llist, positionFromTail) {
+    let prev = null;
+    let current = llist;
+    
+    while (current != null) {
+        let nextTemp = current.next;
+        
+        current.next = prev;
+        prev = current;
+        
+        current = nextTemp;
+    }
+    
+    let currentInverted = prev;
+    let currentPosition = 0;
+    let result = null;
+    while (currentInverted != null) {
+        if (currentPosition === positionFromTail) result = currentInverted.data;
+        currentInverted = currentInverted.next;
+        currentPosition++;
+    }
+    
+    return result;
+}
+
+function mergeLists(head1, head2) { 
+    if (head1 === null) return head2;
+    if (head2 === null) return head1;
+  
+    let mergedList = new SinglyLinkedListNode(0);
+    let current = mergedList;
+    
+    while (head1 !== null && head2 !== null) {
+        if (head1.data <= head2.data) {
+            current.next = head1;
+            head1 = head1.next;
+        } else {
+            current.next = head2;
+            head2 = head2.next;
+        }
+        
+        current = current.next;
+    }
+    
+    if (head1 !== null) current.next = head1;
+    if (head2 !== null) current.next = head2;
+    
+    return mergedList.next;
+}
 
 const main = () => {
     const llistCount = 5;
