@@ -97,6 +97,8 @@ Dijkstra's algorithm is a graph search algorithm that finds the shortest paths f
 - Not support cycles in graph: It only wokrs for graphs without cycle references.
 - Greedy approach: It iteratively selects the unvisited node with the smallest tentative distance from the source and explores its neighbors, updating their distances if a shorter path is found.
 
+### Others:
+- [Floyd's cycle detection algorithm](https://www.google.com/search?q=floyd%27s+cycle+detection+algorithm&oq=Floyd%27s+Cycle+Detection+Algorithm&gs_lcrp=EgZjaHJvbWUqBwgAEAAYgAQyBwgAEAAYgAQyBwgBEAAYgAQyCAgCEAAYFhgeMggIAxAAGBYYHjIICAQQABgWGB4yCggFEAAYChgWGB4yCAgGEAAYFhgeMggIBxAAGBYYHjIICAgQABgWGB4yCAgJEAAYFhge0gEHMjQyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8): Floyd's Cycle Detection Algorithm, also known as the "Tortoise and Hare" algorithm, is a pointer-based algorithm used to detect cycles in linked lists or other sequences where elements can be traversed. It is particularly known for its efficiency in terms of both time and space complexity. The algorithm utilizes two pointers, often referred to as the "tortoise" (slow pointer) and the "hare" (fast pointer). **The slow pointer moves one step forward. The fast pointer moves two steps forward.**
 
 ## Relationship and Importance:
 
