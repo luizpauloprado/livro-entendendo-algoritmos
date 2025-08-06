@@ -61,14 +61,6 @@ The name "bubble sort" comes from the way larger elements "bubble up" to the end
 - In-place sorting: It sorts the array without requiring extra storage space.
 - Stability: It is a stable sorting algorithm, meaning that elements with equal values maintain their relative order in the sorted output.
 
-How it works:
-- Iterate through the list: Start from the beginning of the list and compare the first element with the second.
-- Compare and Swap: If the elements are in the wrong order (e.g., for ascending sort, if the current element is greater than the next), swap them.
-- Move to the next pair: Continue this comparison and swapping process for all adjacent pairs in the list during a single pass.
-- Repeat Passes: After one pass, the largest (or smallest, depending on the sort order) unsorted element will be in its correct position at the end of the unsorted portion of the list. Repeat the entire process for the remaining unsorted portion of the list.
-- Termination: The algorithm terminates when a full pass through the list occurs without any swaps, meaning the list is sorted.
-
-
 ### Searching Algorithms:
 **Binary search:**
 
