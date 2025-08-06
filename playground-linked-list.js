@@ -242,6 +242,31 @@ function mergeLists(head1, head2) {
     return mergedList.next;
 }
 
+function hasCycle(head) {
+    // Edge case: empty list or single node without cycle
+    if (!head || !head.next) {
+        return 0;
+    }
+    
+    // Initialize two pointers
+    let slow = head;      // 🐢 Tortoise - moves 1 step
+    let fast = head;      // 🐰 Hare - moves 2 steps
+    
+    // Continue until fast pointer reaches the end
+    while (fast && fast.next) {
+        slow = slow.next;           // Move slow pointer 1 step
+        fast = fast.next.next;      // Move fast pointer 2 steps
+        
+        // If pointers meet, there's a cycle! 🎯
+        if (slow === fast) {
+            return 1;
+        }
+    }
+    
+    // Fast pointer reached the end - no cycle
+    return 0;
+}
+
 const main = () => {
     const llistCount = 5;
 
