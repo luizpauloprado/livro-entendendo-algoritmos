@@ -80,6 +80,50 @@ Breadth-First Search (BFS) is a graph traversal algorithm that systematically ex
 - Cycle Detection: It can detect cycles in both directed and undirected graphs.
 - Flood Fill Algorithm: The concept of BFS is applied in algorithms like flood fill, where areas are filled outward from a starting point. 
 
+**Depth-First Search (DFS):**
+
+Depth-First Search (DFS) is an algorithm used for traversing or searching tree or graph data structures. It explores as far as possible along each branch before backtracking. 
+
+- Exploration strategy: DFS prioritizes depth over breadth, meaning it explores one path completely before moving to another. This is analogous to navigating a maze by following a single path until a dead end is reached, then backtracking and trying a different path.
+- Implementation: DFS is commonly implemented using recursion or an explicit stack data structure. The "Last In, First Out" (**LIFO**) nature of a stack naturally supports the backtracking mechanism.
+- Visited tracking: To avoid infinite loops in graphs containing cycles, DFS typically employs a mechanism (e.g., a "visited" array or set) to keep track of nodes that have already been explored. This prevents revisiting the same node multiple times.
+
+**BFS vs DFS**
+
+Breadth-First Search (BFS) and Depth-First Search (DFS) are two fundamental graph traversal algorithms with distinct approaches to exploring a graph or tree:
+
+1. Traversal Strategy:
+**BFS:**
+Explores level by level. It starts at a given node, visits all its immediate neighbors, then all their unvisited neighbors, and so on, moving outward in layers.
+**DFS:**
+Explores as deeply as possible along a single path before backtracking. It goes as far as it can down one branch, and only when it reaches a dead end or a visited node does it backtrack to explore another path. 
+
+2. Data Structure Used:
+**BFS:**
+First-In, First-Out (FIFO)
+Employs a queue to manage the order of nodes to visit. Nodes are added to the back of the queue and processed from the front, ensuring a level-by-level exploration.
+**DFS:**
+Last In, First Out (LIFO)
+Utilizes a stack (either explicitly or implicitly through recursion) to keep track of the path being explored. When a new node is visited, it's pushed onto the stack, and when backtracking occurs, nodes are popped off.
+
+3. Use Cases:
+**BFS:**
+**Ideal for finding the shortest path in an unweighted graph**, as it explores all nodes at a given depth before moving to the next. Also used in network broadcasting and finding connected components.
+**DFS:**
+**Suited for problems requiring exploration of deep paths**, such as topological sorting, finding cycles in graphs, solving mazes, and determining if a path exists between two nodes.
+
+4. Completeness and Optimality:
+**BFS:** 
+Guaranteed to find the shortest path in an unweighted graph if one exists.
+**DFS:** 
+Not guaranteed to find the shortest path in an unweighted graph, as it might explore a long path before finding a shorter one.
+
+5. Space Complexity:
+**BFS:**
+Can have higher space complexity in wide graphs as it needs to store all nodes at the current level in the queue.
+**DFS:**
+Generally has lower space complexity in deep graphs, as it only needs to store the current path in the stack.
+
 **Dijkstra:**
 
 Dijkstra's algorithm is a graph search algorithm that finds the shortest paths from a single source node to all other nodes in a **weighted graph**. It is widely used in applications like network routing protocols and mapping services to find optimal routes.
