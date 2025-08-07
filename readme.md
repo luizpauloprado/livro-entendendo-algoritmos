@@ -93,34 +93,44 @@ Depth-First Search (DFS) is an algorithm used for traversing or searching tree o
 Breadth-First Search (BFS) and Depth-First Search (DFS) are two fundamental graph traversal algorithms with distinct approaches to exploring a graph or tree:
 
 1. Traversal Strategy:
+
 **BFS:**
 Explores level by level. It starts at a given node, visits all its immediate neighbors, then all their unvisited neighbors, and so on, moving outward in layers.
+
 **DFS:**
 Explores as deeply as possible along a single path before backtracking. It goes as far as it can down one branch, and only when it reaches a dead end or a visited node does it backtrack to explore another path. 
 
 2. Data Structure Used:
+
 **BFS:**
 First-In, First-Out (FIFO)
 Employs a queue to manage the order of nodes to visit. Nodes are added to the back of the queue and processed from the front, ensuring a level-by-level exploration.
+
 **DFS:**
 Last In, First Out (LIFO)
 Utilizes a stack (either explicitly or implicitly through recursion) to keep track of the path being explored. When a new node is visited, it's pushed onto the stack, and when backtracking occurs, nodes are popped off.
 
 3. Use Cases:
+
 **BFS:**
 **Ideal for finding the shortest path in an unweighted graph**, as it explores all nodes at a given depth before moving to the next. Also used in network broadcasting and finding connected components.
+
 **DFS:**
 **Suited for problems requiring exploration of deep paths**, such as topological sorting, finding cycles in graphs, solving mazes, and determining if a path exists between two nodes.
 
 4. Completeness and Optimality:
+
 **BFS:** 
 Guaranteed to find the shortest path in an unweighted graph if one exists.
+
 **DFS:** 
 Not guaranteed to find the shortest path in an unweighted graph, as it might explore a long path before finding a shorter one.
 
 5. Space Complexity:
+
 **BFS:**
 Can have higher space complexity in wide graphs as it needs to store all nodes at the current level in the queue.
+
 **DFS:**
 Generally has lower space complexity in deep graphs, as it only needs to store the current path in the stack.
 
