@@ -1,7 +1,7 @@
 // Given two integer arrays nums1 and nums2, sorted in non-decreasing order, 
 // return the minimum integer common to both arrays. 
 // If there is no common integer amongst nums1 and nums2, return -1.
-var getCommon = function(nums1, nums2) {
+var minCommonValue = function(nums1, nums2) {
     let index1 = 0;
     let index2 = 0;
 
