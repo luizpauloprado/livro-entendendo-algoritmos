@@ -169,8 +169,8 @@ Data structures and algorithms are intrinsically linked. The choice of data stru
 xxx
 
 **Tree:**
-Operations by level: BFS (sample)[https://github.com/luizpauloprado/livro-entendendo-algoritmos/blob/main/06-breadth-first-search.js#L36]
-Shortest path: BFS BFS (sample)[https://github.com/luizpauloprado/livro-entendendo-algoritmos/blob/main/06-breadth-first-search.js#L36]
-Operations to explore deep paths: DFS (sample)[https://github.com/luizpauloprado/livro-entendendo-algoritmos/blob/main/06-depth-first-search.js#L30]
-Determining if a path exists between two nodes: DFS (sample)[https://github.com/luizpauloprado/livro-entendendo-algoritmos/blob/main/06-depth-first-search.js#L30]
-Weighted graph: Dijkstra (sample)[https://github.com/luizpauloprado/livro-entendendo-algoritmos/blob/main/07-dijkstra.js]
+- Operations by level: BFS (sample)[https://github.com/luizpauloprado/livro-entendendo-algoritmos/blob/main/06-breadth-first-search.js#L36]
+- Shortest path: BFS BFS (sample)[https://github.com/luizpauloprado/livro-entendendo-algoritmos/blob/main/06-breadth-first-search.js#L36]
+- Operations to explore deep paths: DFS (sample)[https://github.com/luizpauloprado/livro-entendendo-algoritmos/blob/main/06-depth-first-search.js#L30]
+- Determining if a path exists between two nodes: DFS (sample)[https://github.com/luizpauloprado/livro-entendendo-algoritmos/blob/main/06-depth-first-search.js#L30]
+- Weighted graph: Dijkstra (sample)[https://github.com/luizpauloprado/livro-entendendo-algoritmos/blob/main/07-dijkstra.js]
