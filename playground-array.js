@@ -55,3 +55,52 @@ function twoSumUsingMap(nums, target) {
     
     return [];
 }
+
+function intersectWithMap(nums1, nums2) {
+    // Count frequencies in the smaller array (optimization)
+    const [smaller, larger] = nums1.length <= nums2.length 
+        ? [nums1, nums2] 
+        : [nums2, nums1];
+    
+    // Build frequency map for smaller array
+    const freqMap = new Map();
+    for (const num of smaller) {
+        freqMap.set(num, (freqMap.get(num) || 0) + 1);
+    }
+    
+    const result = [];
+    
+    // Check larger array against frequency map
+    for (const num of larger) {
+        if (freqMap.has(num) && freqMap.get(num) > 0) {
+            result.push(num);
+            freqMap.set(num, freqMap.get(num) - 1);
+        }
+    }
+    
+    return result;
+}
+
+function intersect(nums1, nums2) {
+    // Sort both arrays
+    nums1.sort((a, b) => a - b);
+    nums2.sort((a, b) => a - b);
+    
+    let i = 0, j = 0;
+    const result = [];
+    
+    // Two pointer traversal
+    while (i < nums1.length && j < nums2.length) {
+        if (nums1[i] === nums2[j]) {
+            result.push(nums1[i]);
+            i++;
+            j++;
+        } else if (nums1[i] < nums2[j]) {
+            i++;
+        } else {
+            j++;
+        }
+    }
+    
+    return result;
+}
