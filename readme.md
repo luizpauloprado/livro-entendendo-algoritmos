@@ -162,7 +162,7 @@ Data structures and algorithms are intrinsically linked. The choice of data stru
 ## Exercises rationale tips:
 
 **Array:**
-- 2 lists: two-pointer technique [sample](https://github.com/luizpauloprado/livro-entendendo-algoritmos/blob/main/playground-array.js#L4) and [article](https://leetcode.com/articles/two-pointer-technique/)
+- 2 lists: two-pointer technique [sample](https://github.com/luizpauloprado/livro-entendendo-algoritmos/blob/main/playground-array.js#L4) and [article](https://leetcode.com/articles/two-pointer-technique/): This method optimizes algorithms by reducing time complexity from O(n²) to O(n). Common applications include finding sums of pairs in sorted arrays (like in the Two Sum problem), finding palindromes, and identifying the container with the most water.
 - recurring the list to target something: use a map [sample](https://github.com/luizpauloprado/livro-entendendo-algoritmos/blob/main/playground-array.js#L43)
 
 **Linked list:**
