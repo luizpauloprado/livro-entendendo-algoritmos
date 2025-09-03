@@ -57,76 +57,30 @@ var firstUniqChar = function(s) {
 
 // String to integer - ATOI
 // time: O(n)
-// space: O(n) - O(k)
+// space: O(n) - O(1)
 var myAtoi = function(s) {
-    if (!s) return 0;
+    let i = 0;
+    let sign = 1;
+    let result = 0;
     
-    const chars = [...s];
+    // Pula espaços em branco
+    while (i < s.length && s[i] === ' ') i++;
     
-    const validChars = new Map();
-    validChars.set("0", 0);
-    validChars.set("1", 1);
-    validChars.set("2", 2);
-    validChars.set("3", 3);
-    validChars.set("4", 4);
-    validChars.set("5", 5);
-    validChars.set("6", 6);
-    validChars.set("7", 7);
-    validChars.set("8", 8);
-    validChars.set("9", 9);
-    
-    const validSigns = new Map();
-    validSigns.set("+", "+");
-    validSigns.set("-", "-");
-    
-    if (validChars.has(chars[0]) === false 
-        && validSigns.has(chars[0]) === false 
-        && chars[0] !== " ") return 0;
-    
-    const result = [];
-    
-    for(let i=0;i < chars.length; i++) {
-        const previous = chars[i-1];
-        const current = chars[i];
-        const next = chars[i+1];
-        
-        if (validChars.has(previous) && validChars.has(current) === false) {
-            break;
-        }
-        
-        if (validSigns.has(previous) && validSigns.has(current)) {
-            break;
-        }
-        
-        if (validSigns.has(current) && next === " ") {
-            break;
-        }
-        
-        if (validSigns.has(current) && validChars.has(next) === false) {
-            break;
-        }
-        
-        if (validChars.has(current) === false && validSigns.has(current) === false && current !== " ") {
-            break;
-        }
-        
-        
-        if (validSigns.has(current) && validChars.has(next)) {
-            result.push(current);
-            continue;
-        }
-        
-        if (validChars.has(current)) {
-            result.push(current);
-            continue;
-        }
+    // Verifica sinal
+    if (i < s.length && (s[i] === '+' || s[i] === '-')) {
+        sign = s[i] === '-' ? -1 : 1;
+        i++;
     }
-
-    if (result.length === 0) return 0;
     
+    // Constrói o número
+    while (i < s.length && s[i] >= '0' && s[i] <= '9') {
+        result = result * 10 + (s[i] - '0');
+        i++;
+    }
+    
+    const value = result*sign;
     const min = -Math.pow(2, 31);
     const max = Math.pow(2, 31) - 1;
-    const value = parseInt(result.join(""), 10);
     
     if (value < min) return min; 
     if (value > max) return max;
