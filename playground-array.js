@@ -104,3 +104,46 @@ function intersect(nums1, nums2) {
     
     return result;
 }
+
+var findClosestElements = function(arr, k, x) {
+    if (k >= arr.length) return arr;
+    
+    let left = 0;
+    let right = arr.length - k; 
+
+    while (left < right) {
+        const mid = Math.floor((left + right) / 2);
+        
+        // Compare distances: arr[mid] vs arr[mid + k]
+        // If distance from x to arr[mid] > distance from x to arr[mid + k]
+        // then we should move right (closer elements are on the right)
+        if (x - arr[mid] > arr[mid + k] - x) {
+            left = mid + 1;
+        } else {
+            right = mid;
+        }
+    }
+    
+    // Return k elements starting from the optimal position
+    return arr.slice(left, left + k);
+};
+
+var findClosestElements2 = function(arr, k, x) {
+    if (k >= arr.length) return arr;
+    
+    let from = 0;
+    let to = arr.length - k; 
+
+    while (from < to) {
+        const mid = Math.floor((from + to) / 2);
+
+        if (x - arr[mid] > arr[mid + k] - x) {
+            from = mid + 1;
+        } else {
+            to = mid;
+        }
+    }
+    
+    // Return k elements starting from the optimal position
+    return arr.slice(from, from + k);
+};
