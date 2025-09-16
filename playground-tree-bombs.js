@@ -3,41 +3,25 @@
 // X-coordinate, Y-coordinate, radius
 
 // My code
+// time: O(n^2)
+// space: O(n)
 var maximumDetonation = function (bombs) {
   let toDetonate = [...bombs];
   let results = [];
 
   while (toDetonate.length > 0) {
-    // get one bomb
-    const currentToDetonate = toDetonate.pop();
-    const x = currentToDetonate[0];
-    const y = currentToDetonate[1];
-    const r = currentToDetonate[2];
+    const [x, y, r] = toDetonate.pop();
     const rx = [x - r, x + r];
     const ry = [y - r, y + r];
-    console.log("=============");
-    console.log(currentToDetonate);
-    console.log("rx: " + rx);
-    console.log("ry: " + ry);
 
-    // iterate the bombs
     let counter = 0;
     let numberOfExplosions = 0;
     while (counter < bombs.length) {
-      const bomb = bombs[counter];
-      const bombX = bomb[0];
-      const bombY = bomb[1];
-      const bombR = bomb[2];
-      console.log("bomb: " + bomb);
-
-      // if detonates - add to result
+      const [bombX, bombY, bombR] = bombs[counter];
       // square
       const insideRx = bombX >= rx[0] && bombX <= rx[1];
       const insideRy = bombY >= ry[0] && bombY <= ry[1];
       const isInside = insideRx && insideRy;
-      // console.log("insideRx " + insideRx);
-      // console.log("insideRy " + insideRy);
-      // console.log("isInside " + isInside);
       //circle
       // const distance = Math.sqrt(((bombX - x) * (bombX - x)) + ((bombY - y) * (bombY - y)));
       // const isInside = distance <= r;
@@ -51,11 +35,10 @@ var maximumDetonation = function (bombs) {
 
     results.push(numberOfExplosions);
   }
-  console.log("number of explosions: " + results);
-  const result = Math.max(...results);
-  console.log("result: " + result);
 
-  return result;
+  console.log("number of explosions: " + results);
+
+  return Math.max(...results);
 };
 
 console.log("Detonate maximum bombs");
