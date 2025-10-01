@@ -87,3 +87,38 @@ var myAtoi = function(s) {
     
     return value;
 };
+
+// no aaa or no bbb
+function abString(A, B) {
+    let a = A;
+    let b = B;
+    let result = '';
+
+    while (a > 0 || b > 0) {
+        // const lastTwo = result.slice(-2);
+        const length = result.length;
+        const lastTwo = result[result.length - 1] + result[result.length - 2];
+
+        if (lastTwo === 'aa') {
+            result += 'b';
+            b--;
+        } else if (lastTwo === 'bb') {
+            result += 'a';
+            a--;
+        } else {
+            if (a > b) {
+                result += 'a';
+                a--;
+            } else {
+                result += 'b';
+                b--;
+            }
+        }
+    }
+
+    return result;
+}
+
+console.log("no aaa or no bbb");
+console.log(abString(3, 4));
+console.log(abString(3, 3));
