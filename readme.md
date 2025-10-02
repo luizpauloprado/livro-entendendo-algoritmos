@@ -70,7 +70,7 @@ Merge sort is an efficient, comparison-based sorting algorithm that follows the 
 - Stability: Merge sort is a stable sorting algorithm, meaning that the relative order of equal elements is preserved in the sorted output.
 - Recursive Nature: It is inherently recursive, relying on function calls to divide and merge sublists.
 
-- **Insertion sort:**
+**Insertion sort:**
 
 Insertion sort is a simple sorting algorithm that builds the final sorted array one item at a time by comparisons. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort.
 
