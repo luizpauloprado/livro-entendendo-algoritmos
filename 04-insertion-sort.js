@@ -22,4 +22,29 @@ function insertionSort(arr) {
 
 const unsortedArray = [5, 2, 8, 1, 9, 4];
 const sortedArray = insertionSort(unsortedArray);
+console.log("insertion sort");
 console.log(sortedArray); // Output: [1, 2, 4, 5, 8, 9]
+
+// number of shifts
+function numberOfShifts(arr) {
+  const n = arr.length; 
+  let shifts = 0;
+
+  for (let i = 1; i < n; i++) {
+    let currentElement = arr[i];
+    let j = i - 1;
+
+    while (j >= 0 && arr[j] > currentElement) {
+      arr[j + 1] = arr[j];
+      j--;
+      shifts++;
+    }
+
+    arr[j + 1] = currentElement;
+  }
+
+  return shifts;
+}
+
+console.log("number of shifts");
+console.log(numberOfShifts([2, 1, 3, 1, 2])); //expected 4
