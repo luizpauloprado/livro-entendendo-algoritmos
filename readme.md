@@ -60,6 +60,24 @@ The name "bubble sort" comes from the way larger elements "bubble up" to the end
 - Time Complexity: Its average and worst-case time complexity is O(N^2), making it inefficient for large datasets.
 - In-place sorting: It sorts the array without requiring extra storage space.
 - Stability: It is a stable sorting algorithm, meaning that elements with equal values maintain their relative order in the sorted output.
+  
+**Merge sort:**
+
+Merge sort is an efficient, comparison-based sorting algorithm that follows the divide and conquer paradigm. It operates by recursively dividing an unsorted list into sublists until each sublist contains only one element (which is inherently sorted). Subsequently, these sublists are repeatedly merged to produce new sorted sublists until there is only one sorted list remaining.
+
+- Time Complexity: Merge sort has a time complexity of O(n log n) in all cases (best, average, and worst), making it a very efficient sorting algorithm, especially for large datasets.
+- Space Complexity: It typically requires O(n) auxiliary space due to the need for temporary arrays during the merging process.
+- Stability: Merge sort is a stable sorting algorithm, meaning that the relative order of equal elements is preserved in the sorted output.
+- Recursive Nature: It is inherently recursive, relying on function calls to divide and merge sublists.
+
+**Insertion sort:**
+
+Insertion sort is a simple sorting algorithm that builds the final sorted array one item at a time by comparisons. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort.
+
+- Time Complexity: Best Case: O(n) - when the array is already sorted. | Average Case: O(n²) - when the array elements are in random order. | Worst Case: O(n²) - when the array is sorted in reverse order.
+- Space Complexity: In-place sorting, requiring minimal additional memory (O(1) space complexity)
+- Advantages: Simple to implement. | Efficient for small datasets or nearly sorted arrays. | Require minimal additional memory (O(1) space complexity). | Stable, meaning it preserves the relative order of equal elements.
+- Disadvantages: Inefficient for large datasets compared to more advanced algorithms like QuickSort or MergeSort due to its quadratic time complexity in the average and worst cases.
 
 ### Searching Algorithms:
 **Binary search:**
