@@ -136,3 +136,25 @@ function isPalindrome(s) {
 console.log("Palindrome");
 console.log(isPalindrome("A man, a plan, a canal: Panama"));
 console.log(isPalindrome("canal"));
+
+function isPalindromeTwoPointers(s) {
+  const cleaned = s.toLowerCase().replace(/[^a-z0-9]/g, "");
+
+  let left = 0;
+  let right = cleaned.length - 1;
+
+  while (left < right) {
+    if (cleaned[left] !== cleaned[right]) {
+      return false;
+    }
+    left++;
+    right--;
+  }
+
+  return true;
+}
+
+console.log("Palindrome two pointer");
+console.log(isPalindromeTwoPointers("A man, a plan, a canal: Panama"));
+console.log(isPalindromeTwoPointers("arara"));
+console.log(isPalindromeTwoPointers("canal"));
